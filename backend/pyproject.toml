@@ -8,23 +8,23 @@ license = { text = "MIT" }
 authors = [{ name = "Yasser Tahiri", email = "hello@yezz.me" }]
 
 dependencies = [
-    "fastapi>=0.136.3",
-    "uvicorn[standard]>=0.48.0",
+    "fastapi>=0.138.2",
+    "uvicorn[standard]>=0.49.0",
     "pydantic>=2.13.4",
-    "pydantic-settings>=2.14.1",
-    "authx==1.6.0",
-    "sqlalchemy[asyncio]>=2.0.50",
+    "pydantic-settings>=2.14.2",
+    "authx==1.7.1",
+    "sqlalchemy[asyncio]>=2.0.51",
     "asyncpg>=0.30.0",
-    "alembic>=1.13.0",
+    "alembic>=1.18.5",
     "psycopg[binary]>=3.3.4",
-    "redis>=8.0.0",
+    "redis>=8.0.1",
     "argon2-cffi>=23.1.0",
-    "python-multipart>=0.0.30",
+    "python-multipart>=0.0.32",
     "email-validator>=2.2.0",
     "httpx>=0.27.0",
     "jinja2>=3.1.4",
-    "structlog>=24.4.0",
-    "typer>=0.26.4",
+    "structlog>=26.1.0",
+    "typer>=0.26.8",
 ]
 
 [project.scripts]
@@ -32,22 +32,22 @@ dogeapi = "dogeapi.cli:main"
 
 [project.optional-dependencies]
 email = [
-    "resend>=2.30.1",
-    "aiosmtplib>=5.1.1",
+    "resend>=2.32.2",
+    "aiosmtplib>=5.1.2",
 ]
 oauth = [
     "authlib>=1.7.2",
     "itsdangerous>=2.2.0",
 ]
 ai = [
-    "pydantic-ai>=1.104.0",
+    "pydantic-ai>=2.2.0",
     "tiktoken>=0.13.0",
 ]
 stripe = [
-    "stripe>=15.2.0",
+    "stripe>=15.3.0",
 ]
 logfire = [
-    "logfire[fastapi,sqlalchemy,redis,httpx]>=4.34.0",
+    "logfire[fastapi,sqlalchemy,redis,httpx]>=4.37.0",
 ]
 httrace = [
     "httrace>=0.1.1",
@@ -58,12 +58,12 @@ all = [
 
 [dependency-groups]
 dev = [
-    "pytest>=8.3.0",
+    "pytest>=9.1.1",
     "pytest-asyncio>=1.4.0",
     "pytest-cov>=6.0.0",
     "pytest-mock>=3.14.0",
     "httpx>=0.27.0",
-    "ruff>=0.15.15",
+    "ruff>=0.15.20",
     "mypy>=2.1.0",
     "types-redis>=4.6.0",
     "factory-boy>=3.3.0",
