@@ -24,7 +24,7 @@ jobs:
     name: Lint + format check
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
@@ -37,7 +37,7 @@ jobs:
   #   name: Mypy
   #   runs-on: ubuntu-latest
   #   steps:
-  #     - uses: actions/checkout@v6
+  #     - uses: actions/checkout@v7
   #     - uses: astral-sh/setup-uv@v7
   #       with:
   #         enable-cache: true
@@ -75,14 +75,14 @@ jobs:
       DATABASE_URL_SYNC: postgresql://dogeapi:dogeapi@localhost:5432/dogeapi_test
       REDIS_URL: redis://localhost:6379/15
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v7
       - uses: astral-sh/setup-uv@v7
         with:
           enable-cache: true
       - run: uv python install 3.12
       - run: uv sync --all-extras
       - run: uv run pytest --cov=src/dogeapi --cov-report=xml
-      - uses: codecov/codecov-action@v6
+      - uses: codecov/codecov-action@v7
         if: ${{ !cancelled() }}
         with:
           files: backend/coverage.xml
