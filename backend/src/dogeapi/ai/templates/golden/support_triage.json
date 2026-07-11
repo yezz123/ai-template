@@ -1,0 +1,27 @@
+[
+  {
+    "name": "double-charge-is-billing-and-escalates",
+    "prompt": "I was charged twice this month and I want my money back immediately.",
+    "expected": {
+      "category": "billing",
+      "needs_human": true
+    }
+  },
+  {
+    "name": "how-do-i-invite-teammates-is-low-severity",
+    "prompt": "Hey, how do I invite my teammates to my workspace?",
+    "expected": {
+      "category": "account",
+      "severity": 1,
+      "needs_human": false
+    }
+  },
+  {
+    "name": "data-loss-hits-severity-floor",
+    "prompt": "All of our organization's documents disappeared after the last sync. Nothing in trash either.",
+    "expected": {
+      "severity": 4,
+      "needs_human": true
+    }
+  }
+]
