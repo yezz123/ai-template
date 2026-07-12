@@ -27,7 +27,7 @@
 - **JWT scoped to org** &mdash; switch orgs and the access token is re-issued with the new `org_id` and computed scopes.
 - **API keys per organization** with scoped permissions, validated via `X-API-Key`.
 - **Email invitations** &mdash; or token-link only when email delivery is disabled.
-- Optional, all gated by `FEATURE_*` env vars: OAuth (Google/GitHub), magic-link, real email delivery (Resend/SMTP), Stripe billing, Pydantic AI + LLM Gateway (chat + demo agents), Logfire observability, audit log, rate limiting.
+- Optional, all gated by `FEATURE_*` env vars: OAuth (Google/GitHub), magic-link, real email delivery (Resend/SMTP), Stripe billing, Pydantic AI + LLM Gateway (chat, demo agents + production agent templates with a golden-transcript eval harness), Logfire observability, audit log, rate limiting.
 
 ## Repository layout
 
